@@ -20,7 +20,7 @@
       "es2018",
       "dom"
     ],
-    "types" : [ "node" ],
+    "types" : [ "node" ]
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
