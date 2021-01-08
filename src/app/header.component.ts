@@ -3,7 +3,8 @@ import { Order } from "./data/entities";
 
 @Component({
     selector: "header",
-    templateUrl: "./header.component.html"
+    templateUrl: "./header.component.html",
+    styles: [' header { background-color: white; color: black; } .btn { background-color: #018ABE; border-color: #018ABE; } .btn:hover { background-color: #6298BC; border-color: #6298BC; }']
 })
 export class Header {
 
