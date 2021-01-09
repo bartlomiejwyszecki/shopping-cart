@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { DataSource } from "./data/dataSource";
 import { Product } from "./data/entities";
+import { Router } from "@angular/router";
 
 @Component({
     selector: "product-list",
@@ -9,7 +10,7 @@ import { Product } from "./data/entities";
 export class ProductList {
     selectedCategory = "Wszystkie";
 
-    constructor(public dataSource: DataSource) {}
+    constructor(public dataSource: DataSource, private router: Router) {}
 
     get products(): Product[] {
         return this.dataSource.getProducts("id", this.selectedCategory === "Wszystkie" ?
@@ -29,7 +30,7 @@ export class ProductList {
     }
 
     handleSubmit() {
-        console.log('WYŚLIJ');
+        this.router.navigateByUrl("/order");
     }
 }
 

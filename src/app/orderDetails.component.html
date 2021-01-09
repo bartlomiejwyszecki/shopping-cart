@@ -1,0 +1,30 @@
+<h3 class="text-center bg-primary text-white p-2">Informacje o zamówieniu</h3>
+<div class="p-3">
+    <table class="table table-sm table-striped">
+        <thead>
+            <tr>
+                <th>Ilość</th><th>Produkt</th>
+                <th class="text-right">Cena</th>
+                <th class="text-right">Wartość</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let line of order.orderLines">
+                <td>{{ line.quantity }}</td>
+                <td>{{ line.product.name }}</td>
+                <td class="text-right">{{ line.product.price.toFixed(2) }} zł</td>
+                <td class="text-right">{{ line.total.toFixed(2) }} zł</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th class="text-right" colSpan="3">Razem:</th>
+                <th class="text-right">{{ order.total.toFixed(2) }} zł</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<div class="text-center">
+    <button class="btn btn-secondary m-1" routerLink="/products">Wróć</button>
+    <button class="btn btn-primary m-1" (click)="submit()">Złóż zamówienie</button>
+</div>

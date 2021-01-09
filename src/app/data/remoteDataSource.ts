@@ -5,13 +5,15 @@ import { map } from "rxjs/operators";
 import { DataSourceImpl } from "./dataSource";
 import { Product, Order } from "./entities";
 
-const protocol = "http";
-const hostname = "localhost";
-const port = 4600;
+// const protocol = document.location.protocol;
+// const hostname = document.location.hostname;
+// const port = 4600;
 
 const urls = {
-    products: `${protocol}://${hostname}:${port}/products`,
-    orders: `${protocol}://${hostname}:${port}/orders`
+    // products: `${protocol}://${hostname}:${port}/products`,
+    // orders: `${protocol}://${hostname}:${port}/orders`
+    products: "/api/products",
+    orders: "/api/orders"
 };
 
 @Injectable()
