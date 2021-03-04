@@ -17,6 +17,10 @@ npm install
 ```
 -and then
 ```
+ng build --prod
+```
+-and then
+```
 npm start
 ```
 Your project will be running on localhost:4200
