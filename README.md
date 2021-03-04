@@ -9,18 +9,18 @@ Application made to improve typescript and angular skills. It's a simple shoppin
 ## Installation
 
 To install this application, you have to:
--Download zip or clone repository,
--Navigate to folder with application in your terminal,
--Write command in terminal
+1. Download zip or clone repository,
+2. Navigate to folder with application in your terminal,
+3. Write command in terminal
 ```
 npm install
 ```
--and then
+and then
 ```
 ng build --prod
 ```
--and then
+and then
 ```
-npm start
+node server.js
 ```
-Your project will be running on localhost:4200
+Your project will be running on localhost:4001
